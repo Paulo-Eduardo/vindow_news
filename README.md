@@ -31,12 +31,7 @@ In `./client/.env` set VITE_API_URL to the one you choose
 - local = `http://localhost:8081/v1`
 - provided = `https://contextualwebsearch-websearch-v1.p.rapidapi.com/api`
 
-Also, the api key and host should be setted(this sted is indiferent for the api used)
-
-```
-VITE_RAPIDAPI_KEY=e28105562fmsh01edebafeeb6117p1f37e7jsn0221a314ae3d
-VITE_RAPIDAPI_HOST=contextualwebsearch-websearch-v1.p.rapidapi.com
-```
+Also, the api key and host should be setted(this step is indiferent for the api used). Use the ones provided from the test description
 
 This two are hardcoded on local api just for the sake of this test. I wanted to let front just switch API address and use the rest as it is
 
