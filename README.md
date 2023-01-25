@@ -28,7 +28,7 @@ now you can use the api developed here or even the one provided for this test
 
 In `./client/.env` set VITE_API_URL to the one you choose
 
-- local = `http://localhost:8081/v1`
+- local = `http://localhost:8083/v1`(port that you exported the api)
 - provided = `https://contextualwebsearch-websearch-v1.p.rapidapi.com/api`
 
 Also, the api key and host should be setted(this step is indiferent for the api used). Use the ones provided from the test description
