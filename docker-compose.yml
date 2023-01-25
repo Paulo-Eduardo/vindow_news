@@ -1,0 +1,40 @@
+version: "3.1"
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+
+  server:
+    build:
+      context: ./api
+      target: dev
+    restart: always
+    depends_on:
+      - mongo
+    ports:
+      - 8081:8081
+    volumes:
+      - /opt/node_modules
+      - ./api:/opt
+
+  client:
+    build:
+      context: ./client
+    ports:
+      - 5173:5173
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+
+  mongo-seed:
+    env_file:
+      - .env
+    build:
+      context: ./mongo_seed
+      dockerfile: Dockerfile
+      args:
+        - DATABASE_URI=$DATABASE_URI
+        - MONGO_INITDB_DATABASE=$MONGO_INITDB_DATABASE
+    depends_on:
+      - mongo

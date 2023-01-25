@@ -1,0 +1,46 @@
+.card-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	flex-shrink: 1;
+	align-items: flex-start;
+	justify-content: flex-start;
+	overflow-y: scroll;
+	height: calc(100vh - 180px);
+	width: 100vv;
+}
+
+.empty-list {
+	height: calc(100vh - 180px);
+	width: 100vv;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader-container {
+	height: calc(100vh - 180px);
+	width: 100vv;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.spinner {
+	width: 64px;
+	height: 64px;
+	border: 8px solid;
+	border-color: #3d5af1 transparent #3d5af1 transparent;
+	border-radius: 50%;
+	animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
